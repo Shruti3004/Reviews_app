@@ -35,7 +35,7 @@ export default function Home({ navigation }) {
   };
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.titleText}>Home</Text>
+      <Text style={globalStyles.titleText}>Home</Text>    
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
