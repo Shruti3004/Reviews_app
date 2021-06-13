@@ -3,7 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
+  ImageBackground,
   FlatList,
   TouchableOpacity,
 } from "react-native";
@@ -14,18 +14,20 @@ function Header({ navigation, title }) {
     navigation.openDrawer();
   };
   return (
-    <View style={styles.header}>
-      <MaterialIcons
-        name="menu"
-        size={28}
-        color="black"
-        onPress={openMenu}
-        style={styles.icon}
-      />
-      <View>
-        <Text style={styles.headerText}>{title}</Text>
-      </View>
-    </View>
+    
+      <ImageBackground style={styles.header} source={require('../assets/game_bg.png')}>
+        <MaterialIcons
+          name="menu"
+          size={28}
+          color="black"
+          onPress={openMenu}
+          style={styles.icon}
+        />
+        <View>
+          <Text style={styles.headerText}>{title}</Text>
+        </View>
+      </ImageBackground>
+    
   );
 }
 
