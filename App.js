@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import * as Font from "expo-font";
-import Home from "./screens/home";
 import AppLoading from "expo-app-loading";
-import Navigator from './routes/homeStack'
+import DrawerNavigator from "./routes/drawer";
 
 const getFonts = () =>
   Font.loadAsync({
@@ -17,7 +16,9 @@ export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
   if (fontsLoaded) {
     return (
-      <Navigator />
+      <React.Fragment>
+        <DrawerNavigator />
+      </React.Fragment>
     );
   } else {
     return (
