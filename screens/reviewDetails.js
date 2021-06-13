@@ -1,10 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { globalStyles } from "../styles/global";
 
 export default function ReviewDetails() {
   return (
-    <View style={styles.container}>
-      <Text>Review Details</Text>
+    <View style={globalStyles.container}>
+      <Text style={globalStyles.titleText}>Review Details</Text>
     </View>
   );
 }
