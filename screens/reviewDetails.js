@@ -6,7 +6,6 @@ import { globalStyles, images } from "../styles/global";
 export default function ReviewDetails({ route }) {
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.titleText}>Review Details</Text>
       <Card>
         <Text style={globalStyles.titleText}>{route.params.title}</Text>
         <Text style={globalStyles.titleText}>{route.params.body}</Text>

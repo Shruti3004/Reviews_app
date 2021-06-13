@@ -6,8 +6,8 @@ export const globalStyles = StyleSheet.create({
     padding: 20,
   },
   titleText: {
-    fontFamily: "font-bold",
-    fontSize: 25,
+    fontFamily: "font-demi",
+    fontSize: 18,
     color: "#333",
   },
   paragraph: {

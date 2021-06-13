@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  ImageBackground,
-  FlatList,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
 function Header({ navigation, title }) {
@@ -42,11 +35,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   headerText: {
-    color: "#333",
-    fontWeight: "bold",
+    color: "#333",    
     fontFamily: "font-bold",
-    fontSize: 20,
-    letterSpacing: 1,
+    fontSize: 25,
   },
   icon: {
     position: "absolute",

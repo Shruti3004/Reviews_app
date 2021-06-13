@@ -6,11 +6,14 @@ import {
   Button,
   FlatList,
   TouchableOpacity,
+  Modal,
 } from "react-native";
 import Card from "../shared/Card";
 import { globalStyles } from "../styles/global";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function Home({ navigation }) {
+  const [openModal, setOpenModal] = useState(false);
   const [reviews, setReviews] = useState([
     {
       title: "Zelda, Breath of Fresh Air",
@@ -36,7 +39,25 @@ export default function Home({ navigation }) {
   };
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.titleText}>Home</Text>
+      <Modal visible={openModal} animationType="slide">
+        <MaterialIcons
+          name="close"
+          size={28}
+          color="#333"
+          onPress={() => setOpenModal(false)}
+          style={{ ...styles.icon, ...styles.closeIcon }}
+        />
+        <View>
+          <Text>Shruti GAarwal you are best</Text>
+        </View>
+      </Modal>
+      <MaterialIcons
+        name="add"
+        size={28}
+        color="#333"
+        onPress={() => setOpenModal(true)}
+        style={styles.icon}
+      />
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
@@ -54,4 +75,17 @@ export default function Home({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  icon: {
+    padding: 10,
+    alignSelf: "center",
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 5,
+    borderStyle: "dashed",
+    marginBottom: 10,
+  },
+  closeIcon: {
+    marginTop: 20,
+  },
+});
